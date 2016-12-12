@@ -5,6 +5,15 @@
     "osDiskVhdUri": {
       "value": "existing-vhd"
     },
+	"dataDisk1": {
+      "value": "existing-vhd"
+    },
+	"dataDisk2": {
+      "value": "existing-vhd"
+    },
+	"dataDisk3": {
+      "value": "existing-vhd"
+    },
     "osType": {
       "value": "Windows or Linux"
     },
