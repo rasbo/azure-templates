@@ -151,7 +151,7 @@
               "diskSizeGB": "[parameters('sizeOfEachDataDiskInGB')]",
               "lun": 0,
               "vhd": {
-                "uri": "[concat(reference(concat('Microsoft.Storage/storageAccounts/', variables('storageAccountName')), variables('apiVersion')).primaryEndpoints.blob, variables('vmStorageAccountContainerName'),'/',variables('vmName'),'dataDisk1.vhd')]"
+                "uri": "[parameters('dataDisk1')]"
               },
               "createOption": "Empty"
             },
@@ -160,7 +160,7 @@
               "diskSizeGB": "[parameters('sizeOfEachDataDiskInGB')]",
               "lun": 1,
               "vhd": {
-                "uri": "[concat(reference(concat('Microsoft.Storage/storageAccounts/', variables('storageAccountName')), variables('apiVersion')).primaryEndpoints.blob, variables('vmStorageAccountContainerName'),'/',variables('vmName'),'dataDisk2.vhd')]"
+                "uri": "[parameters('dataDisk2')]"
               },
               "createOption": "Empty"
             },
@@ -169,7 +169,7 @@
               "diskSizeGB": "[parameters('sizeOfEachDataDiskInGB')]",
               "lun": 2,
               "vhd": {
-                "uri": "[concat(reference(concat('Microsoft.Storage/storageAccounts/', variables('storageAccountName')), variables('apiVersion')).primaryEndpoints.blob, variables('vmStorageAccountContainerName'),'/',variables('vmName'),'dataDisk3.vhd')]"
+                "uri": "[parameters('dataDisk3')]"
               },
               "createOption": "Empty"
             }
