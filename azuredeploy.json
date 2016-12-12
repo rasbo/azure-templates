@@ -136,7 +136,7 @@
       },
       "storageProfile": {
         "osDisk": {
-          "name": "[concat(parameters('vmName'),'-osDisk')]",
+          "name": "agBoot",
           "osType": "[parameters('osType')]",
           "caching": "ReadWrite",
           "vhd": {
@@ -144,33 +144,33 @@
           },
           "createOption": "Attach"
         }
-      },
           "dataDisks": [
             {
-              "name": "datadisk1",
+              "name": "agRoot",
               "lun": 0,
               "vhd": {
                 "uri": "[parameters('dataDisk1')]"
               },
-              "createOption": "Empty"
+              "createOption": "Attach"
             },
             {
-              "name": "datadisk2",
+              "name": "agUpgrade",
               "lun": 1,
               "vhd": {
                 "uri": "[parameters('dataDisk2')]"
               },
-              "createOption": "Empty"
+              "createOption": "Attach"
             },
             {
-              "name": "datadisk3",
+              "name": "agSwap",
               "lun": 2,
               "vhd": {
                 "uri": "[parameters('dataDisk3')]"
               },
-              "createOption": "Empty"
+              "createOption": "Attach"
             }
-          ],
+          ],		  
+      },
       "networkProfile": {
         "networkInterfaces": [{
           "id": "[resourceId('Microsoft.Network/networkInterfaces', variables('nicName'))]"
