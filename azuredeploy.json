@@ -148,7 +148,6 @@
           "dataDisks": [
             {
               "name": "datadisk1",
-              "diskSizeGB": "[parameters('sizeOfEachDataDiskInGB')]",
               "lun": 0,
               "vhd": {
                 "uri": "[parameters('dataDisk1')]"
@@ -157,7 +156,6 @@
             },
             {
               "name": "datadisk2",
-              "diskSizeGB": "[parameters('sizeOfEachDataDiskInGB')]",
               "lun": 1,
               "vhd": {
                 "uri": "[parameters('dataDisk2')]"
@@ -166,7 +164,6 @@
             },
             {
               "name": "datadisk3",
-              "diskSizeGB": "[parameters('sizeOfEachDataDiskInGB')]",
               "lun": 2,
               "vhd": {
                 "uri": "[parameters('dataDisk3')]"
