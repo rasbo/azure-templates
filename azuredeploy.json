@@ -8,6 +8,24 @@
         "description": "Uri of the existing VHD"
       }
     },
+	"dataDisk1": {
+      "type": "string",
+      "metadata": {
+        "description": "Uri of the existing VHD"
+      }
+    },
+	"dataDisk2": {
+      "type": "string",
+      "metadata": {
+        "description": "Uri of the existing VHD"
+      }
+    },
+	"dataDisk3": {
+      "type": "string",
+      "metadata": {
+        "description": "Uri of the existing VHD"
+      }
+    },
     "osType": {
       "type": "string",
       "allowedValues": [
@@ -152,15 +170,6 @@
               "lun": 2,
               "vhd": {
                 "uri": "[concat(reference(concat('Microsoft.Storage/storageAccounts/', variables('storageAccountName')), variables('apiVersion')).primaryEndpoints.blob, variables('vmStorageAccountContainerName'),'/',variables('vmName'),'dataDisk3.vhd')]"
-              },
-              "createOption": "Empty"
-            },
-            {
-              "name": "datadisk4",
-              "diskSizeGB": "[parameters('sizeOfEachDataDiskInGB')]",
-              "lun": 3,
-              "vhd": {
-                "uri": "[concat(reference(concat('Microsoft.Storage/storageAccounts/', variables('storageAccountName')), variables('apiVersion')).primaryEndpoints.blob, variables('vmStorageAccountContainerName'),'/',variables('vmName'),'dataDisk4.vhd')]"
               },
               "createOption": "Empty"
             }
