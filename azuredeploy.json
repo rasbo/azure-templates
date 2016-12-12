@@ -143,33 +143,33 @@
             "uri": "[parameters('osDiskVhdUri')]"
           },
           "createOption": "Attach"
-        }
-          "dataDisks": [
-            {
-              "name": "agRoot",
-              "lun": 0,
-              "vhd": {
-                "uri": "[parameters('dataDisk1')]"
-              },
-              "createOption": "Attach"
+        },
+        "dataDisks": [
+        {
+            "name": "agRoot",
+            "lun": 0,
+            "vhd": {
+              "uri": "[parameters('dataDisk1')]"
             },
-            {
-              "name": "agUpgrade",
-              "lun": 1,
-              "vhd": {
-                "uri": "[parameters('dataDisk2')]"
-              },
-              "createOption": "Attach"
+            "createOption": "Attach"
+          },
+          {
+            "name": "agUpgrade",
+            "lun": 1,
+            "vhd": {
+              "uri": "[parameters('dataDisk2')]"
             },
-            {
-              "name": "agSwap",
-              "lun": 2,
-              "vhd": {
-                "uri": "[parameters('dataDisk3')]"
-              },
-              "createOption": "Attach"
-            }
-          ],		  
+            "createOption": "Attach"
+          },
+          {
+            "name": "agSwap",
+            "lun": 2,
+            "vhd": {
+              "uri": "[parameters('dataDisk3')]"
+            },
+            "createOption": "Attach"
+          }
+        ],		  
       },
       "networkProfile": {
         "networkInterfaces": [{
